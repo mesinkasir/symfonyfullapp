@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+	{% for error in errors %}
+		<div class="alert alert-success p-3 p-md-5">
+			<h3>{{ error.message}}
+			</h3>
+		</div>
+	{% endfor %}
+
+
+	<br>
+	<div class="col-12 p-3 p-md-5 text-center">
+	<h3 class="text-center p-1"><strong>Register New User</strong></h3>
+	<p><a href="{{path('admin')}}">Back home page</a></p>
+	</div>
+	<div class="col-md-12 p-3">
+	<div class="card shadow rounded p-3 p-md-5 text-center">
+
+		<h2>Register</h2>
+		<br>
+
+		{{form(regform)}}
+</div>
+	</div>
+{% endblock %}

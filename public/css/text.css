@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+html, body,p {
+	font: 100 1.415rem/1.475rem 'Montserrat', sans-serif;
+}
+navbar,nav,ul,li {
+	font: 100 1.015rem/1.075rem 'Montserrat', sans-serif;
+}
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+a:link {
+  color: black;
+}
+a:visited {
+  color: black;
+}
+a:hover {
+  color: black;
+}
+a:active {
+  color: black;
+}

@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+{% block title %}Article Blog{% endblock %}
+{% block body %}
+<div class="col-12 p-3 p-md-5">
+<h1 class="text-center"><strong><a href="/article">Blog Article</a></strong></h1>
+<hr/>
+<div class="row">
+{% for article in articles %}
+<div class="col-md-6 p-3">
+<img width="100%" class="img-fluid " alt="{{ article.title }}" src="{{ article.cover }}"/>
+<h3><strong><a href="/article">{{ article.title }}</a></strong></h3>
+<p>{{ article.description }}</p>
+<p><a class="btn btn-dark text-white" href="{{ path('article_show', {'id': article.id}) }}">More info →</a></p>
+</div>
+{% else %}
+<div class="text-center p-3">no records found</div>
+{% endfor %}
+</div>
+</div>
+{% endblock %}

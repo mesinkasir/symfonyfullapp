@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block title %}Our Gallery{% endblock %}
+{% block body %}
+<div class="col-12 p-3 p-md-5">
+<h1 class="text-center"><strong><a href="/article">Gallery</a></strong></h1>
+<hr/>
+<div class="row">
+{% for gallery in galleries %}
+<div class="col-md-4 p-3">
+<a href="{{ path('gallery_show', {'id': gallery.id}) }}"><img width="100%" class="img-fluid " alt="{{ gallery.title }}" src="{{ gallery.Imageurl }}"/>
+</a>
+</div>
+{% else %}
+<div class="text-center p-3">no records found</div>
+{% endfor %}
+</div>
+</div>
+{% endblock %}

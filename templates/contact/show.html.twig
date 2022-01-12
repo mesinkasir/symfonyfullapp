@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+<div class="col-12 p-3 p-md-5">
+<h1 class="text-center p-1"><strong>{{ contact.title }}</strong></h1>
+<p class="text-center">{{ contact.description }}</p>
+<img class="img-fluid" alt="{{ contact.title }}" src="{{ contact.cover }}"/>
+<p>Address : {{ contact.address }}</p>
+<p>City : {{ contact.city }}</p>
+<p>Country : {{ contact.country }}</p>
+<p>Phone : {{ contact.phone }}</p>
+<p>Whatsapp : {{ contact.whatsapp }}</p>
+<p>Email : {{ contact.email }}</p>
+</div>
+{% endblock %}

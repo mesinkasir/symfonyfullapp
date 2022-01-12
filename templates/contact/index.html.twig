@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact index{% endblock %}
+
+{% block body %}
+    <h1>Contact index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Country</th>
+                <th>Phone</th>
+                <th>Whatsapp</th>
+                <th>Email</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for contact in contacts %}
+            <tr>
+                <td>{{ contact.id }}</td>
+                <td>{{ contact.title }}</td>
+                <td>{{ contact.description }}</td>
+                <td>{{ contact.address }}</td>
+                <td>{{ contact.city }}</td>
+                <td>{{ contact.country }}</td>
+                <td>{{ contact.phone }}</td>
+                <td>{{ contact.whatsapp }}</td>
+                <td>{{ contact.email }}</td>
+                <td>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="10">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ article.title }}{% endblock %}
+{% block fbtitle %}{{ article.title }}{% endblock %}
+{% block twtitle %}{{ article.title }}{% endblock %}
+{% block ogtitle %}{{ article.title }}{% endblock %}
+{% block description %}{{ article.description }}{% endblock %}
+{% block fbdescription %}{{ article.description }}{% endblock %}
+{% block twdescription %}{{ article.description }}{% endblock %}
+{% block ogdescription %}{{ article.description }}{% endblock %}
+{% block fbimage%}{{ article.cover}}{% endblock %}
+{% block twimage%}{{ article.cover}}{% endblock %}
+{% block body %}
+<div class="col-12 p-3 p-md-5">
+<h1 class="text-center"><strong><a href="/article/">{{ article.title }}</a></strong></h1>
+<img class="img-fluid " alt="{{ article.title }}" src="{{ article.cover }}"/>
+<h3>{{ article.description }}</h3>
+<p>{{ article.content }}</p>
+</div>
+<div class="p-1 text-center">
+<a class="btn btn-dark text-white" href="{{ path('article_index') }}">back to article</a>
+</div>
+{% endblock %}

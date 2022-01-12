@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+{% block title %}Symfony Web CMS and APP{% endblock %}
+{% block body %}
+{% for homepage in homepages %}
+<div class="col-12 p-3 p-md-5">
+<img class="img-fluid" alt="{{ homepage.title }}" src="{{ homepage.cover }}"/>
+<h1 class="text-center"><strong><a href="/">{{ homepage.title }}</a></strong></h1>
+<h2 class="text-center">{{ homepage.decription }}</h2>
+<img width="100%" class="img-fluid rounded shadow" alt="{{ homepage.section1title }}" src="{{ homepage.section1cover }}"/>
+<h3 class="p-1">{{ homepage.section1title }}</h3>
+<p>{{ homepage.section1content }}</p>
+</div>
+<div class="row text-white" style="background-color:black;">
+<div class="col-md-4 p-3">
+<h3>{{ homepage.section2title }}</h3>
+<img width="100%" class="img-fluid rounded shadow" alt="{{ homepage.section2title }}" src="{{ homepage.section2cover }}"/></div>
+<div class="col-md-8 p-3 p-md-5">
+<p>{{ homepage.section2content }}</p>
+</div>
+</div>
+<img width="100%" class="img-fluid" alt="{{ homepage.section2title }}" src="{{ homepage.footercover }}"/>
+<div class="col-12 p-3 p-md-5">
+<h4>{{ homepage.footer }}</h4>
+<p>{{ homepage.footercontent }}</p>
+</div>
+{% else %}
+{% endfor %}
+{% endblock %}

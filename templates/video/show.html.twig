@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ video.title }}{% endblock %}
+{% block fbtitle %}{{ video.title }}{% endblock %}
+{% block twtitle %}{{ video.title }}{% endblock %}
+{% block ogtitle %}{{ video.title }}{% endblock %}
+{% block description %}{{ video.description}}{% endblock %}
+{% block fbdescription %}{{ video.description}}{% endblock %}
+{% block twdescription %}{{ video.description}}{% endblock %}
+{% block ogdescription %}{{ video.description}}{% endblock %}
+{% block body %}
+<div class="col-12 p-3 p-md-5">
+<h1 class="text-center"><strong><a href="/gallery/">{{ video.title }}</a></strong></h1>
+<div class="ratio ratio-16x9">
+  <iframe src="https://www.youtube.com/embed/{{ video.YoutubeUrl }}" title="{{ video.title }}"></iframe>
+</div>
+<p>{{ video.description }}</p>
+</div>
+<div class="p-1 text-center">
+<a class="btn btn-dark text-white" href="{{ path('video_index') }}">back to gallery</a>
+</div>
+{% endblock %}
