@@ -19,7 +19,8 @@ Default login
 
 user : symfony
 
-pass: Hy7yGfyT^9@ng#KW
+password hash : Hy7yGfyT^9@ng#KW
+
 
 -----------------------------------------------------------------
 
